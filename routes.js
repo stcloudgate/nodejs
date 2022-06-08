@@ -1,3 +1,7 @@
+
+
+// no more used - replaced with modular routes
+
 const reqHandler = ((req, res) => {
     const url = req.url;
     if (url === '/') {

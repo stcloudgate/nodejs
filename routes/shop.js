@@ -1,11 +1,15 @@
 
+const rootDir = require('../util/path');
+const path = require('path');
+
 const express = require('express');
 const router = express.Router();
 
 router.get('/', (req,res,next) => {
     console.log('in last middleware');
-    res.send('<h1>hello from express</h1>')
-    //next()
+
+    // path method build the path in a way that is agnostic to operating systems - windows / linux etc.
+    res.sendFile(path.join(rootDir, "views", "shop.html"));
 });
 
 module.exports = router;
