@@ -14,6 +14,9 @@ const app = express();
 // does the body parsing of the request sent throught a form
 app.use(bodyParser.urlencoded({extended: false}));
 
+//Allows serving of static files - css 
+app.use(express.static(path.join(rootDir,"public")));
+
 //app.use method handled any method on http, to call precise get or post - make use of app.get or app.post
 app.use('/admin',adminroutes);
 app.use(shopRoutes);
