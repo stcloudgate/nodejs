@@ -14,7 +14,7 @@ router.get('/', (req,res,next) => {
 
     const products = adminData.products;
     //res.render('shop', {prods: products}); //passing the products array to the template
-    res.render('shop', {prods: products, docTitle: 'Shop'}); //passing additional data also to the template
+    res.render('shop', {prods: products, pageTitle: 'Shop', path: '/'}); //passing additional data also to the template
 
 });
 
